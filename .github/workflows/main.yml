@@ -1,1 +1,15 @@
+name: 'Simple Workflow Example'
 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hello World
+      run: echo "Hello, World!"
